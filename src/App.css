@@ -1,4 +1,18 @@
 /* Extra mobile fixes for clean stacking and spacing */
+/* Sticky header for desktop */
+@media (min-width: 701px) {
+  .site-header {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #e0e4f6cc;
+    background: #fff;
+    transition: box-shadow 0.2s;
+  }
+}
+
 @media (max-width: 700px) {
   .about-hero-inner, .about-main, .team-grid, .services-hero-inner, .services-grid, .contact-main, .contact-details {
     flex-direction: column !important;
