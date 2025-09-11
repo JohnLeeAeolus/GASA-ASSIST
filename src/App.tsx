@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import WhyChoose from './components/WhyChoose';
 import Testimonials from './components/Testimonials';
+import FAQSection from './components/FAQSection';
+import CTAOffer from './components/CTAOffer';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -18,7 +20,9 @@ function Home() {
       <Services />
       <WhyChoose />
       <Testimonials />
+      <FAQSection />
       <CTA />
+      <CTAOffer />
     </>
   );
 }
