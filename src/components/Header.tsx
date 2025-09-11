@@ -63,39 +63,44 @@ export default function Header() {
                 </div>
             </div>
             {/* Mobile nav overlay */}
-            <style>{`
-                @media (max-width: 900px) {
-                  .nav-toggle {
-                    display: block !important;
-                  }
-                  .nav-group {
-                    display: none !important;
-                  }
-                  .nav-group.open {
-                    display: flex !important;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    width: 100vw;
-                    background: #fff;
-                    box-shadow: 0 8px 32px #1976d230;
-                    z-index: 100;
-                    padding: 1.2rem 0 1.5rem 0;
-                    align-items: flex-start;
-                    gap: 1.2rem;
-                  }
-                  .main-nav {
-                    flex-direction: column !important;
-                    gap: 1.2rem !important;
-                    width: 100%;
-                  }
-                  .btn.small {
-                    width: 90vw;
-                    margin-left: 0 !important;
-                  }
-                }
-            `}</style>
+                        <style>{`
+                                @media (max-width: 900px) {
+                                    .nav-toggle {
+                                        display: block !important;
+                                    }
+                                    .nav-group {
+                                        display: none !important;
+                                    }
+                                    .nav-group.open {
+                                        display: flex !important;
+                                        flex-direction: column;
+                                        position: fixed;
+                                        top: 64px;
+                                        left: 0;
+                                        width: 100vw;
+                                        background: #fff;
+                                        box-shadow: 0 8px 32px #1976d230;
+                                        z-index: 100;
+                                        padding: 1.2rem 0 1.5rem 0;
+                                        align-items: flex-start;
+                                        gap: 1.2rem;
+                                        animation: slideDown 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+                                    }
+                                    @keyframes slideDown {
+                                        from { opacity: 0; transform: translateY(-16px); }
+                                        to { opacity: 1; transform: none; }
+                                    }
+                                    .main-nav {
+                                        flex-direction: column !important;
+                                        gap: 1.2rem !important;
+                                        width: 100%;
+                                    }
+                                    .btn.small {
+                                        width: 90vw;
+                                        margin-left: 0 !important;
+                                    }
+                                }
+                        `}</style>
         </header>
     );
 }
