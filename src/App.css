@@ -3,7 +3,7 @@
   .about-hero-inner, .about-main, .team-grid, .services-hero-inner, .services-grid, .contact-main, .contact-details {
     flex-direction: column !important;
     display: flex !important;
-    gap: 1.2rem !important;
+    /* ...existing code... */
     align-items: stretch !important;
     width: 100% !important;
     margin: 0 !important;
