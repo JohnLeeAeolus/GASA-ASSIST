@@ -1,3 +1,64 @@
+/* Responsive global styles for mobile */
+@media (max-width: 700px) {
+  .container, .footer-inner, .header-inner {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+  .site-header {
+    min-height: 56px;
+  }
+  .main-nav, .footer-nav {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .site-header, .site-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero-oa-inner, .services-grid, .why-row, .footer-inner {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    align-items: stretch !important;
+  }
+  .hero-oa-copy h1, .section-title, .cta-inner h2 {
+    font-size: 1.4rem !important;
+  }
+  .hero-oa-copy .subtitle, .cta-inner p {
+    font-size: 1rem !important;
+  }
+  .hero-oa-img, .why-media img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .service-card, .testimonial, .why, .testimonials, .cta {
+    padding: 1.2rem 0.7rem !important;
+    border-radius: 1rem !important;
+    margin: 1rem 0 !important;
+  }
+  .cta {
+    padding: 2rem 0.7rem !important;
+  }
+  .btn, .btn.primary, .btn.oa-yellow {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  .socials {
+    gap: 0.7rem !important;
+  }
+  .socials a {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+  .footer-nav a {
+    font-size: 1rem;
+  }
+  .tiny {
+    font-size: 0.9rem;
+  }
+}
 /* Modern Animations */
 .fade-in {
   opacity: 0;
