@@ -7,24 +7,26 @@ type HeroProps = {
     imageUrl?: string
 }
 
+
 export default function Hero({
-    title = 'Your Business, Amplified',
-    subtitle = 'GASA ASSIST: Expert Virtual Assistance for Modern Professionals',
-    ctaText = 'Contact Us Today',
-    imageUrl = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop',
+    title = 'Build the Remote Team You Deserve',
+    subtitle = 'With GASA ASSIST, you can hire high-calibre offshore staff who share your vision, and we upskill them even further to support your expanding business.',
+    ctaText = 'CONTACT US TODAY',
+    imageUrl = '/assets/hero-person.png', // Place your PNG here
 }: HeroProps) {
     return (
-        <section className="hero">
-            <div className="container hero-grid">
-                <div className="hero-copy">
-                    <h1>{title}</h1>
-                    <p className="subtitle">{subtitle}</p>
-                    <div className="actions">
-                        <a className="btn primary" href="#contact">{ctaText}</a>
+        <section className="hero hero-oa">
+            <div className="hero-oa-inner">
+                <div className="hero-oa-copy fade-in">
+                    <h1 className="fade-in delay-1">{title}</h1>
+                    <p className="subtitle fade-in delay-2">{subtitle}</p>
+                    <div className="actions fade-in delay-3">
+                        <a className="btn oa-yellow" href="#contact">{ctaText}</a>
                     </div>
                 </div>
-                <div className="hero-media">
-                    <img src={imageUrl} alt="Professional using laptop" />
+                <div className="hero-oa-media fade-in delay-2">
+                    <img src={imageUrl} alt="Remote team" className="hero-oa-img" />
+                    {/* Optionally add accent SVGs or PNGs here */}
                 </div>
             </div>
         </section>
