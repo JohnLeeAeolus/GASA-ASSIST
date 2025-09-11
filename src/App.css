@@ -10,69 +10,81 @@
   }
   .about-hero-inner > *, .services-hero-inner > *, .about-main > section, .team-grid > *, .services-grid > *, .contact-main > *, .contact-details > * {
     width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .team-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .team-card, .service-card, .testimonial, .why, .testimonials, .cta, .about-hero, .services-hero, .contact-main > *, .contact-details > * {
-    padding: 1.2rem 0.7rem !important;
-    border-radius: 1rem !important;
-    margin: 1rem 0 !important;
-    box-shadow: 0 2px 8px #e0e4f6cc !important;
-    background: #fff !important;
-  }
-  .about-hero-inner img, .services-hero-inner img, .hero-oa-img, .why-media img {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    display: block !important;
-  }
-  h1, h2, h3, h4 {
-    font-size: 1.2rem !important;
-    margin-bottom: 0.7rem !important;
-    word-break: break-word !important;
-  }
-  .section-title, .hero-oa-copy h1, .cta-inner h2 {
-    font-size: 1.4rem !important;
-    word-break: break-word !important;
-  }
-  .hero-oa-copy .subtitle, .cta-inner p, .about-hero-inner p, .about-main p, .service-card p, .testimonial .quote, .why-text p {
-    font-size: 1rem !important;
-    word-break: break-word !important;
-  }
-  .btn, .btn.primary, .btn.oa-yellow {
-    width: 100% !important;
-    font-size: 1rem !important;
-    padding: 0.8rem 0 !important;
-    border-radius: 8px !important;
-  }
-  .actions {
-    flex-direction: column !important;
-    gap: 0.7rem !important;
-    width: 100% !important;
-  }
-  .main-nav, .footer-nav {
-    flex-direction: column !important;
-    gap: 1rem !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-  }
-  .footer-inner {
-    gap: 1.2rem !important;
-  }
-  .footer-nav a {
-    font-size: 1rem !important;
-  }
-  .tiny {
-    font-size: 0.9rem !important;
-  }
-  .socials {
-    gap: 0.7rem !important;
-    justify-content: flex-start !important;
-  }
+
+    @media (max-width: 600px) {
+      /* Testimonial section mobile fix */
+      .testimonials-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 1.2rem !important;
+        width: 100vw !important;
+        margin-left: -4vw !important;
+        margin-right: -4vw !important;
+        padding: 0 !important;
+      }
+      .testimonial-card, .testimonials-container > div {
+        width: 96vw !important;
+        min-width: 0 !important;
+        max-width: 98vw !important;
+        margin: 0 auto !important;
+        padding: 1.2rem 1rem !important;
+        font-size: 1rem !important;
+        border-radius: 18px !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        word-break: break-word !important;
+        white-space: normal !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .testimonial-author {
+        font-size: 1rem !important;
+        margin-top: 0.7rem !important;
+      }
+      .testimonial-role {
+        font-size: 0.9rem !important;
+      }
+
+      /* FAQ section */
+      .faq-section, .faq-container {
+        padding: 0.5rem 0.5rem !important;
+      }
+      .faq-question {
+        font-size: 1.05rem !important;
+        padding: 0.7rem 0.5rem !important;
+      }
+      .faq-answer {
+        font-size: 0.98rem !important;
+        padding: 0.5rem 0.5rem !important;
+      }
+      .faq-toggle {
+        right: 1rem !important;
+      }
+      .faq-view-more-btn {
+        width: 90vw !important;
+        font-size: 1.1rem !important;
+        padding: 0.7rem 0 !important;
+        margin: 1rem auto !important;
+        display: block !important;
+      }
+
+      /* General section spacing */
+      section, .section {
+        padding: 1.2rem 0.5rem !important;
+      }
+
+      /* Button adjustments */
+      button, .cta-btn, .faq-view-more-btn {
+        font-size: 1.1rem !important;
+        padding: 0.7rem 1.2rem !important;
+      }
+
+      /* Hide overflow for horizontal scrolls */
+      body {
+        overflow-x: hidden !important;
+      }
+    }
   .socials a {
     width: 32px !important;
     height: 32px !important;
@@ -855,4 +867,5 @@ main {
   .why-row {
     grid-template-columns: 1fr;
   }
+}
 }
