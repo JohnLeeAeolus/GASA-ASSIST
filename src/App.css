@@ -1,23 +1,24 @@
+
 .app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #f8fafc;
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
 }
 
 .site-header {
   position: sticky;
   top: 0;
-  background: #ffffffcc;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+  border-bottom: 1px solid #e0e4f6;
   z-index: 10;
 }
 
@@ -25,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  min-height: 72px;
 }
 
 .brand {
@@ -33,7 +34,8 @@
   align-items: center;
   gap: 0.4rem;
   font-weight: 800;
-  color: #111827;
+  color: #0a63c9;
+  font-size: 1.3rem;
 }
 
 .logo-mark {
@@ -46,10 +48,258 @@
   font-weight: 800;
 }
 
-.nav {
-  display: flex;
-  gap: 1.25rem;
+
+
+.main-nav .nav-link {
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
+.main-nav .nav-link:hover, .main-nav .nav-link.active {
+  background: #eaf2fd;
+  color: #0a63c9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: #0a63c9;
+  color: #fff;
+  box-shadow: 0 2px 8px #0a63c930;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn.primary {
+  background: #0a63c9;
+  color: #fff;
+}
+.btn.light {
+  background: #fff;
+  color: #0a63c9;
+  border: 1.5px solid #0a63c9;
+}
+.btn.small {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+}
+
+.hero {
+  background: linear-gradient(90deg, #eaf2fd 0%, #fff 100%);
+  padding: 4.5rem 0 3.5rem 0;
+}
+.hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.hero-copy {
+  flex: 1 1 350px;
+}
+.hero-copy h1 {
+  font-size: 2.8rem;
+  color: #0a63c9;
+  margin-bottom: 1.2rem;
+}
+.hero-copy .subtitle {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+.hero-media {
+  flex: 1 1 320px;
+  text-align: right;
+}
+.hero-media img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px #0a63c930;
+}
+
+.section {
+  padding: 4rem 0 3rem 0;
+}
+.section-title {
+  font-size: 2.1rem;
+  color: #0a63c9;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+  padding: 2rem 1.5rem;
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 6px 24px #0a63c930;
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.why {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+  margin: 2rem 0;
+  padding: 3rem 0;
+}
+.why-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.why-row.reverse {
+  flex-direction: row-reverse;
+}
+.why-text {
+  flex: 1 1 320px;
+}
+.why-media {
+  flex: 1 1 320px;
+}
+.why-media img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+}
+
+.testimonials {
+  background: #eaf2fd;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+  margin: 2rem 0;
+  padding: 3rem 0;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px #e0e4f6cc;
+  padding: 2rem 1.5rem;
+  margin: 0 0.5rem;
+  text-align: left;
+}
+.quote {
+  font-size: 1.1rem;
+  color: #0a63c9;
+  margin-bottom: 1.2rem;
+}
+.person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.avatar {
+  font-size: 2rem;
+  background: #eaf2fd;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  font-weight: 700;
+  color: #222;
+}
+.role {
+  color: #6b7280;
+  font-size: 0.98rem;
+}
+
+.cta {
+  background: linear-gradient(90deg, #0a63c9 0%, #1976d2 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+  border-radius: 1.5rem;
+  margin: 2rem 0;
+}
+.cta-inner h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+.cta-inner p {
+  font-size: 1.15rem;
+  margin-bottom: 2.2rem;
+  color: #eaf2fd;
+}
+
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #e0e4f6;
+  padding: 2.5rem 0 1.5rem 0;
+  margin-top: 2rem;
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+.footer-nav a {
+  color: #0a63c9;
+  font-weight: 500;
+  font-size: 1.08rem;
+}
+.socials {
+  display: flex;
+  gap: 1.2rem;
+}
+.socials a {
+  color: #0a63c9;
+  font-size: 1.3rem;
+  background: #eaf2fd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.socials a:hover {
+  background: #0a63c9;
+  color: #fff;
+}
+.tiny {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 1.2rem;
+}
+
+/* Removed stray gap property and closing brace */
 
 .nav a {
   color: #374151;
@@ -68,12 +318,8 @@ main {
   padding: 3rem 0;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-}
+
+/* .hero-grid already defined above as flex, keep only one definition for consistency */
 
 .hero-copy .subtitle {
   max-width: 48ch;
@@ -263,74 +509,7 @@ main {
   font-weight: 600;
 }
 
-.role {
-  opacity: 0.85;
-  font-size: 0.9rem;
-}
 
-/* CTA */
-.cta {
-  background: #0a63c9;
-  color: white;
-}
-
-.cta-inner {
-  text-align: center;
-  padding: 3rem 0;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.btn.light {
-  background: white;
-  color: #0a63c9;
-  border-color: white;
-}
-
-/* Improve CTA text contrast */
-.cta h2 {
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.cta p {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-/* Header button */
-.btn.small {
-  padding: 0.4em 0.9em;
-  font-size: 0.95em;
-}
-
-/* Footer */
-.site-footer {
-  background: #f3f4f6;
-  border-top: 1px solid var(--border);
-}
-
-.footer-inner {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1.25rem 0;
-  align-items: center;
-  justify-items: center;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.socials {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.tiny {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
 
 @media (max-width: 768px) {
   .grid {
